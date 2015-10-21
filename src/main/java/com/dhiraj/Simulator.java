@@ -5,11 +5,9 @@ import org.apache.commons.math3.stat.descriptive.rank.Percentile;
 
 /**
  * @author dkumar Simulation of retirement class based on Monte Carlo simulation
- *         The class is extending the Runnable so that it can be invoked by
- *         multiple threads
- *
+ *       
  */
-public class Simulator implements Runnable {
+public class Simulator  {
 
 	private double principal;
 	private int years;

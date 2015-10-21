@@ -27,23 +27,15 @@ public class RetirementCalculator {
 		double meanConserReturn = 6.189;
 		double meanConserStandardDeviation = 6.3438;
 		int noIterations = 10000;
-
 		double inflationIndex = 3.5;
-		long startTime = System.currentTimeMillis();
-
+		
 		Simulator aggresiveSimulation = new Simulator(principal, years, meanAggReturn, meanAggStandardDeviation,
 				inflationIndex, noIterations, "Aggresive");
 		aggresiveSimulation.run();
-		// new Thread(aggresiveSimulation).start();
-
+		
 		Simulator conservativeSimulation = new Simulator(principal, years, meanConserReturn,
 				meanConserStandardDeviation, inflationIndex, noIterations, "Conservative");
 		conservativeSimulation.run();
-		// new Thread(conservativeSimulation).start();
-
-		long stopTime = System.currentTimeMillis();
-		long elapsedTime = stopTime - startTime;
-		System.out.println("Time taken for processing " + elapsedTime);
 
 	}
 
